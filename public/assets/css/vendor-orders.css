@@ -1,0 +1,54 @@
+.tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #eee;
+}
+.tab-item {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #888;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.tab-item:hover { color: var(--dark-green); }
+.tab-item.active {
+    color: var(--dark-green);
+    border-bottom-color: var(--dark-green);
+}
+.tab-badge {
+    background: var(--light-green);
+    color: var(--dark-green);
+    border-radius: 20px;
+    padding: 1px 8px;
+    font-size: 12px;
+}
+.tab-item.active .tab-badge {
+    background: var(--dark-green);
+    color: #fff;
+}
+.order-card {
+    display: grid;
+    grid-template-columns: 110px 1.5fr 1fr 1.2fr 120px;
+    align-items: center;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.order-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.status-badge-pending  { background:#FFF4E5; color:#B7791F; }
+.status-badge-confirmed{ background:#EBF8FF; color:#2B6CB0; }
+.status-badge-ready    { background:#F0FFF4; color:#276749; }
+.status-badge-picked_up,
+.status-badge-completed{ background:#E2E8F0; color:#4A5568; }
+.status-badge-cancelled{ background:#FFF5F5; color:#C53030; }

@@ -1,0 +1,16 @@
+.form-grid { display:grid; grid-template-columns:1.5fr 1fr; gap:30px; margin-top:20px; }
+.input-group { margin-bottom:20px; }
+.input-group label { display:block; margin-bottom:8px; font-family:'Roboto Slab',serif; font-weight:500; color:var(--dark-green); font-size:14px; }
+.input-group input,
+.input-group select,
+.input-group textarea { width:100%; padding:12px; border:1px solid #ddd; border-radius:8px; font-family:'Noto Serif',serif; font-size:14px; }
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus { outline:none; border-color:var(--green-accent); }
+.image-drop-zone { border:2px dashed var(--light-green); padding:40px; text-align:center; border-radius:12px; cursor:pointer; background:#fafafa; transition:0.2s; }
+.image-drop-zone:hover { background:rgba(186,199,106,0.15); border-color:var(--green-accent); }
+.preview-card { position:sticky; top:40px; border-top:6px solid var(--red-accent); }
+.error-list { background:#fff3f3; border:1px solid #f5c6cb; border-radius:8px; padding:14px 18px; margin-bottom:20px; }
+.error-list li { color:#721c24; font-size:14px; margin-bottom:4px; }
+.toggle-row { display:flex; gap:30px; align-items:center; }
+.toggle-label { display:flex; align-items:center; gap:8px; cursor:pointer; font-size:14px; }

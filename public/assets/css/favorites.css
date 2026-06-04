@@ -1,0 +1,48 @@
+.fav-page { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+
+.fav-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.75rem; flex-wrap: wrap; gap: 1rem; }
+.fav-header h1 { font-family: 'Roboto Slab', serif; color: var(--dark-green, #374629); font-size: 1.75rem; display: flex; align-items: center; gap: .5rem; margin: 0; }
+.fav-header h1 .material-icons { color: var(--red-accent, #9a3718); }
+.fav-count { color: #888; font-size: .9rem; }
+
+/* Tabs */
+.fav-tabs { display: flex; border-bottom: 2px solid #eee; margin-bottom: 1.5rem; }
+.fav-tab { background: none; border: none; padding: .65rem 1.25rem; font-family: 'Roboto Slab', serif; font-size: .9rem; font-weight: 600; color: #888; cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: .15s; }
+.fav-tab.active { color: var(--red-accent, #9a3718); border-bottom-color: var(--red-accent, #9a3718); }
+.fav-tab:hover:not(.active) { color: #555; }
+
+/* Grid */
+.fav-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.25rem; }
+
+/* Card */
+.fav-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,.07); display: flex; flex-direction: column; transition: transform .18s, box-shadow .18s; }
+.fav-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,.12); }
+.fav-card-img-wrap { display: block; text-decoration: none; }
+.fav-card-img-wrap img { width: 100%; height: 180px; object-fit: cover; display: block; }
+.fav-card-body { padding: 1rem; display: flex; flex-direction: column; flex: 1; }
+.fav-card-type { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--red-accent, #9a3718); margin-bottom: .3rem; }
+.fav-card-name { font-family: 'Roboto Slab', serif; font-size: 1rem; color: var(--dark-green, #374629); margin-bottom: .25rem; line-height: 1.3; text-decoration: none; display: block; }
+.fav-card-name:hover { text-decoration: underline; }
+.fav-card-sub { font-size: .82rem; color: #777; margin-bottom: .6rem; }
+.fav-card-price { font-weight: 700; color: var(--red-accent, #9a3718); font-size: .95rem; margin-bottom: .75rem; }
+.fav-card-actions { display: flex; gap: .5rem; margin-top: auto; }
+.fav-card-actions .btn-primary { flex: 1; justify-content: center; font-size: .82rem; padding: .55rem .5rem; text-decoration: none; }
+.fav-remove-btn { background: none; border: 1.5px solid #fecaca; border-radius: 8px; color: #c53030; cursor: pointer; padding: .5rem .65rem; display: flex; align-items: center; transition: .15s; }
+.fav-remove-btn:hover { background: #fff5f5; }
+.fav-remove-btn .material-icons { font-size: 18px; }
+
+/* Flash */
+.flash-msg { padding: .85rem 1.2rem; border-radius: 10px; margin-bottom: 1.25rem; font-size: .9rem; font-weight: 500; }
+.flash-success { background: #f0fff4; color: #276749; border: 1px solid #9ae6b4; }
+.flash-error   { background: #fff5f5; color: #c53030; border: 1px solid #feb2b2; }
+
+/* Empty */
+.fav-empty { text-align: center; padding: 4rem 2rem; background: #fff; border-radius: 16px; border: 1px solid #eee; }
+.fav-empty .material-icons { font-size: 3.5rem; color: #ddd; display: block; margin-bottom: 1rem; }
+.fav-empty h3 { font-family: 'Roboto Slab', serif; color: #555; margin-bottom: .5rem; }
+.fav-empty p { color: #888; font-size: .9rem; margin-bottom: 1.25rem; }
+
+@media (max-width: 600px) {
+    .fav-page { padding: 1rem; }
+    .fav-grid { grid-template-columns: 1fr 1fr; }
+}

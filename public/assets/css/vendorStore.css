@@ -13,9 +13,7 @@ body {
   display: grid;
   grid-template-columns: minmax(320px, 38%) minmax(0, 62%);
   gap: 2rem;
-  align-items: start; /* left panel doesn't stretch to full height */
-  /* make the right panel fill viewport height so tabs stay fixed */
-  height: calc(100vh - 110px);
+  align-items: start;
 }
 
 .vendor-store-left {
@@ -34,8 +32,7 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  /* fill the grid row height so inner scroll works */
-  height: 100%;
+  height: 80vh;
 }
 
 .vendor-cover {
@@ -112,8 +109,8 @@ body {
 
 .vendor-actions {
   margin-top: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: flex-start;
   gap: 10px;
   padding-top: .75rem;
 }

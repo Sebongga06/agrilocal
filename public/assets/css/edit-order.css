@@ -1,0 +1,21 @@
+.edit-order-wrap { max-width: 640px; margin: 2rem auto; padding: 0 1rem 3rem; }
+.edit-order-wrap h1 { font-family: 'Roboto Slab', serif; color: var(--dark-green, #1a3c2e); margin-bottom: .25rem; }
+.edit-order-wrap .sub { color: #666; font-size: .9rem; margin-bottom: 1.75rem; }
+.edit-card { background: #fff; border: 1px solid #e7e7e7; border-radius: 16px; padding: 1.75rem; box-shadow: 0 4px 16px rgba(0,0,0,.05); }
+.field-group { margin-bottom: 1.25rem; }
+.field-group label { display: block; font-family: 'Roboto Slab', serif; font-weight: 600; font-size: .88rem; color: #333; margin-bottom: .5rem; }
+.field-group input[type="datetime-local"],
+.field-group textarea { width: 100%; box-sizing: border-box; padding: .65rem .85rem; border: 1px solid #ddd; border-radius: 10px; font-family: 'Noto Serif', serif; font-size: .93rem; outline: none; }
+.field-group input:focus,
+.field-group textarea:focus { border-color: #2d6a4f; }
+.field-group textarea { resize: vertical; min-height: 80px; }
+.radio-row { display: flex; gap: 1.5rem; }
+.radio-row label { font-family: 'Noto Serif', serif; font-weight: 400; font-size: .93rem; display: flex; align-items: center; gap: .4rem; cursor: pointer; }
+.btn-row { display: flex; gap: .75rem; margin-top: 1.5rem; }
+.btn-save { flex: 1; padding: .75rem; background: #9a3718; color: #fff; border: none; border-radius: 10px; font-family: 'Roboto Slab', serif; font-weight: 600; font-size: .95rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: .4rem; }
+.btn-save:hover { background: #7d2c12; }
+.btn-back { flex: 1; padding: .75rem; background: #f5f5f5; color: #555; border: 1px solid #ddd; border-radius: 10px; font-family: 'Roboto Slab', serif; font-weight: 600; font-size: .95rem; text-align: center; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: .4rem; }
+.btn-back:hover { background: #eee; }
+.error-box { background: #fff5f5; color: #c53030; border: 1px solid #feb2b2; border-radius: 10px; padding: .85rem 1rem; margin-bottom: 1.25rem; font-size: .88rem; }
+.back-link { display: inline-flex; align-items: center; gap: .3rem; color: #9a3718; text-decoration: none; font-size: .88rem; font-weight: 600; margin-bottom: 1rem; }
+.back-link:hover { text-decoration: underline; }

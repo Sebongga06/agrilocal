@@ -1,0 +1,93 @@
+.order-card {
+    background: #fff;
+    border: 1px solid #e7e7e7;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,.05);
+    margin-bottom: 1rem;
+}
+.order-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+.order-card-header:hover { background: #fafafa; }
+.order-meta h3 { margin: 0 0 .3rem; font-family: 'Roboto Slab', serif; color: var(--dark-green, #1a3c2e); }
+.order-meta p  { margin: 0 0 .25rem; color: #666; font-size: .9rem; }
+.order-right   { text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: .5rem; }
+.order-amount  { font-weight: 700; color: #c0392b; font-size: 1.05rem; }
+
+/* Status badges */
+.status-badge {
+    display: inline-block;
+    padding: .35rem .75rem;
+    border-radius: 999px;
+    font-size: .82rem;
+    font-weight: 600;
+}
+.status-pending   { background: #fff4e5; color: #b7791f; }
+.status-confirmed { background: #ebf8ff; color: #2b6cb0; }
+.status-ready     { background: #f0fff4; color: #276749; }
+.status-completed,
+.status-picked_up { background: #e8f4fd; color: #1a5276; }
+.status-cancelled { background: #fff5f5; color: #c53030; }
+
+/* Action buttons */
+.order-actions { display: flex; gap: .5rem; flex-wrap: wrap; justify-content: flex-end; margin-top: .25rem; }
+.btn-cancel   { background: #fff5f5; color: #c53030; border: 1px solid #feb2b2; border-radius: 8px; padding: .4rem .9rem; font-size: .82rem; font-weight: 600; cursor: pointer; }
+.btn-cancel:hover { background: #fed7d7; }
+.btn-received { background: #9a3718; color: #fff; border: 1px solid #9a3718; border-radius: 8px; padding: .4rem .9rem; font-size: .82rem; font-weight: 600; cursor: pointer; }
+.btn-received:hover { background: #7d2c12; }
+.btn-expand   { background: none; border: none; color: #888; cursor: pointer; font-size: .82rem; display: flex; align-items: center; gap: 3px; }
+.btn-expand .material-icons { font-size: 16px; transition: transform .2s; }
+.btn-expand.open .material-icons { transform: rotate(180deg); }
+
+/* Items panel */
+.order-items-panel { display: none; border-top: 1px solid #f0f0f0; padding: 1rem 1.5rem; background: #fafafa; }
+.order-items-panel.open { display: block; }
+.order-item-row { display: flex; justify-content: space-between; align-items: center; padding: .5rem 0; border-bottom: 1px solid #f0f0f0; font-size: .88rem; color: #444; }
+.order-item-row:last-child { border-bottom: none; }
+.order-item-name { font-weight: 500; }
+.order-item-price { color: #555; }
+
+/* Flash */
+.flash-msg { padding: .85rem 1.2rem; border-radius: 10px; margin-bottom: 1.25rem; font-size: .9rem; font-weight: 500; }
+.flash-success { background: #f0fff4; color: #276749; border: 1px solid #9ae6b4; }
+.flash-error   { background: #fff5f5; color: #c53030; border: 1px solid #feb2b2; }
+
+/* Confirmation Modal */
+.confirm-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:9999;align-items:center;justify-content:center;}
+.confirm-backdrop.show{display:flex;}
+.confirm-modal{background:#fff;border-radius:16px;padding:1.75rem 2rem;width:360px;max-width:95vw;box-shadow:0 20px 60px rgba(0,0,0,.2);text-align:center;}
+.confirm-modal h4{margin:0 0 .5rem;font-family:'Roboto Slab',serif;color:#1a3c2e;font-size:1.05rem;}
+.confirm-modal p{margin:0 0 1.5rem;color:#666;font-size:.9rem;}
+.confirm-btns{display:flex;gap:.75rem;justify-content:center;}
+.confirm-btns .btn-ok{background:#2d6a4f;color:#fff;border:none;border-radius:10px;padding:.55rem 1.4rem;font-size:.9rem;font-weight:600;cursor:pointer;}
+.confirm-btns .btn-ok:hover{background:#245a40;}
+.confirm-btns .btn-ok:disabled{opacity:.6;cursor:not-allowed;}
+.confirm-btns .btn-no{background:#f5f5f5;color:#555;border:1px solid #ddd;border-radius:10px;padding:.55rem 1.4rem;font-size:.9rem;font-weight:600;cursor:pointer;}
+.confirm-btns .btn-no:hover{background:#eee;}
+
+/* Rate & Review button */
+.btn-review { background: #2d6a4f; color: #fff; border: 1px solid #2d6a4f; border-radius: 8px; padding: .4rem .9rem; font-size: .82rem; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; }
+.btn-review:hover { background: #245a40; }
+.btn-reviewed { background: #f0fff4; color: #276749; border: 1px solid #9ae6b4; border-radius: 8px; padding: .4rem .9rem; font-size: .82rem; font-weight: 600; display: inline-flex; align-items: center; gap: 4px; }
+
+/* Review modal */
+.review-modal { width: 420px; text-align: left; }
+.review-modal h4 { text-align: center; }
+.review-modal #reviewModalSubtitle { text-align: center; color: #666; font-size: .88rem; margin-top: -.25rem; }
+
+/* Star rating widget */
+.star-rating { display: flex; flex-direction: row-reverse; justify-content: center; gap: 4px; margin-bottom: 1rem; }
+.star-rating input { display: none; }
+.star-rating label { cursor: pointer; color: #ddd; font-size: 0; }
+.star-rating label .material-icons { font-size: 2rem; transition: color .15s; }
+.star-rating input:checked ~ label .material-icons,
+.star-rating label:hover .material-icons,
+.star-rating label:hover ~ label .material-icons { color: #f6ad55; }

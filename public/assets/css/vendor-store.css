@@ -1,0 +1,72 @@
+/* ── Vendor store page ── */
+.vendor-store-page { padding-top: 0; }
+
+/* Left panel overrides */
+.vendor-cover { height: 200px; }
+
+/* Right panel: tabs fixed, content scrolls */
+.vendor-store-right { height: 80vh; }
+.vendor-tabs {
+  position: sticky; top: 0; z-index: 5;
+  background: #fff; flex-shrink: 0;
+}
+.vendor-tab-content { overflow-y: auto; flex: 1; }
+.vendor-tab-content.active { display: flex; flex-direction: column; }
+
+/* Vendor actions — single favorite button */
+.vendor-actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: .5rem;
+  margin-top: .75rem;
+}
+.vendor-action-btn {
+  font-size: .82rem !important;
+  padding: .55rem .9rem !important;
+  justify-content: center !important;
+  text-align: center !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: .25rem !important;
+  white-space: nowrap;
+}
+
+/* Product search */
+.vendor-search {
+  display: flex; align-items: center; gap: 8px;
+  background: #f8f8f8; border: 1px solid #e8e8e8;
+  border-radius: 10px; padding: .55rem .9rem; margin-bottom: 1.25rem;
+  flex-shrink: 0;
+}
+.vendor-search .material-icons { color: #aaa; font-size: 18px; }
+.vendor-search input { border: none; background: none; outline: none; font-size: .9rem; color: #333; width: 100%; }
+
+/* Pickup box */
+.pickup-box {
+  background: #f8fffe; border: 1px solid #b7e4c7;
+  border-radius: 12px; padding: 1rem 1.25rem; margin-top: 1rem;
+}
+.pickup-box strong { color: #1a3c2e; font-size: .9rem; }
+.pickup-text { color: #555; font-size: .88rem; margin: .4rem 0 0; line-height: 1.6; }
+
+/* Location */
+.location-links { margin-top: 1rem; }
+#vendorMap { height: 280px; border-radius: 12px; overflow: hidden; }
+
+/* Switch-to-Vendor Modal */
+.sv-modal-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:9999;align-items:center;justify-content:center;}
+.sv-modal-backdrop.show{display:flex;}
+.sv-modal{background:#fff;border-radius:16px;padding:2rem;width:360px;max-width:95vw;box-shadow:0 20px 60px rgba(0,0,0,.2);position:relative;}
+.sv-modal h3{margin:0 0 .5rem;font-family:'Roboto Slab',serif;color:#1a3c2e;}
+.sv-modal p{margin:0 0 1rem;color:#555;font-size:.9rem;}
+.sv-modal-close{position:absolute;top:12px;right:14px;background:none;border:none;font-size:1.3rem;cursor:pointer;color:#888;}
+.sv-error{color:#c0392b;font-size:.82rem;margin-bottom:8px;display:none;}
+.sv-pw-wrap{position:relative;margin-bottom:4px;}
+.sv-pw-wrap input{width:100%;box-sizing:border-box;padding:.65rem 2.5rem .65rem .85rem;border:1px solid #ddd;border-radius:10px;font-size:.95rem;outline:none;}
+.sv-pw-wrap input::-ms-reveal,.sv-pw-wrap input::-ms-clear,.sv-pw-wrap input::-webkit-credentials-auto-fill-button{display:none !important;}
+.sv-pw-wrap input:focus{border-color:#2d6a4f;}
+.sv-pw-toggle{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:#888;display:flex;align-items:center;}
+.sv-pw-toggle .material-icons{font-size:18px;}
+.sv-submit{width:100%;margin-top:12px;padding:.7rem;background:#2d6a4f;color:#fff;border:none;border-radius:10px;font-size:.95rem;font-weight:600;cursor:pointer;}
+.sv-submit:hover{background:#245a40;}
+.sv-submit:disabled{opacity:.6;cursor:not-allowed;}

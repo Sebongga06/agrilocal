@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalStoreLink = document.getElementById("modalStoreLink");
   const closeModal     = document.getElementById("closeModal");
   const focusOnMapBtn  = document.getElementById("focusOnMapBtn");
-  const searchInput    = document.getElementById("searchInput");
+  const searchInput    = document.querySelector('.main-nav .search-bar input:not([type="hidden"])');
 
   // ── Map init ──
   function initMap() {
@@ -216,12 +216,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (searchInput) {
     searchInput.addEventListener("input", () => renderVendors());
-    searchInput.addEventListener("keydown", function (e) {
-      if (e.key === "Enter") {
-        const q = this.value.trim();
-        if (q) window.location.href = `index.php?url=products&search=${encodeURIComponent(q)}`;
-      }
-    });
   }
 
   if (closeModal)     closeModal.addEventListener("click", closeVendorModal);
